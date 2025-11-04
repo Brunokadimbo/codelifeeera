@@ -1,0 +1,89 @@
+.profileDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profileButton {
+  background: transparent;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  width: 40px;
+  height: 40px;
+}
+
+.profileButton:hover {
+  border-color: var(--color-neon-purple);
+  box-shadow: var(--glow-purple);
+  color: var(--color-neon-purple);
+}
+
+.profileButton:focus-visible {
+  outline: 2px solid var(--color-neon-purple);
+  outline-offset: 2px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: var(--spacing-sm);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), var(--glow-purple);
+  min-width: 160px;
+  z-index: 1000;
+  animation: slideDown 150ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menuItem {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.menuItem:first-child {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.menuItem:last-child {
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.menuItem:hover {
+  background: rgba(200, 0, 255, 0.1);
+  color: var(--color-neon-purple);
+  padding-left: calc(var(--spacing-lg) + var(--spacing-sm));
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-card-border);
+  margin: var(--spacing-sm) 0;
+}

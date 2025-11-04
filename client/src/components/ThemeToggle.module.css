@@ -1,0 +1,36 @@
+.themeToggle {
+  background: transparent;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: all var(--transition-normal);
+}
+
+.themeToggle:hover {
+  border-color: var(--color-neon-purple);
+  color: var(--color-neon-purple);
+  box-shadow: var(--glow-purple);
+  transform: rotate(20deg);
+}
+
+.themeToggle:focus-visible {
+  outline: 2px solid var(--color-neon-purple);
+  outline-offset: 2px;
+}
+
+.themeToggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-normal);
+}
+
+.themeToggle:active svg {
+  transform: scale(0.9);
+}
